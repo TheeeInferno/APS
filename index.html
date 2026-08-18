@@ -28,7 +28,7 @@
         <div class="wrap nav">
 
             <a class="brand" href="#home">
-                APS · ADVANCE PROTECTION SERVICES
+            APS · ADVANCE PROTECTION SERVICES
             </a>
 
             <nav class="links" aria-label="Main navigation">
@@ -649,20 +649,29 @@
                 <div class="contact">
 
                     <form
+                        aria-label="Request a quote"
                         onsubmit="event.preventDefault(); alert('Form demo: connect this form to an email/form service before publishing.');"
                     >
 
                         <div class="grid2">
 
+                            <label class="sr-only" for="name">Your name</label>
                             <input
+                                id="name"
+                                name="name"
                                 type="text"
                                 placeholder="Your Name"
+                                autocomplete="name"
                                 required
                             >
 
+                            <label class="sr-only" for="email">Email address</label>
                             <input
+                                id="email"
+                                name="email"
                                 type="email"
                                 placeholder="Email Address"
+                                autocomplete="email"
                                 required
                             >
 
@@ -671,43 +680,55 @@
 
                         <div class="grid2">
 
+                            <label class="sr-only" for="company">Company or property</label>
                             <input
+                                id="company"
+                                name="company"
                                 type="text"
                                 placeholder="Company / Property"
+                                autocomplete="organization"
                             >
 
+                            <label class="sr-only" for="phone">Phone number</label>
                             <input
+                                id="phone"
+                                name="phone"
                                 type="tel"
                                 placeholder="Phone Number"
+                                autocomplete="tel"
                             >
 
                         </div>
 
 
-                        <select>
-                            <option>
+                        <label class="sr-only" for="service">Service needed</label>
+                        <select id="service" name="service" required>
+                            <option value="" selected disabled>
                                 Service Needed
                             </option>
 
-                            <option>
+                            <option value="armed-security">
                                 Armed Security
                             </option>
 
-                            <option>
+                            <option value="unarmed-security">
                                 Unarmed Security
                             </option>
 
-                            <option>
+                            <option value="mobile-patrol">
                                 Mobile Patrol
                             </option>
 
-                            <option>
+                            <option value="custom-security">
                                 Custom Security
                             </option>
                         </select>
 
 
+                        <label class="sr-only" for="message">Property and security needs</label>
                         <textarea
+                            id="message"
+                            name="message"
                             placeholder="Tell us about your property and security needs"
                         ></textarea>
 

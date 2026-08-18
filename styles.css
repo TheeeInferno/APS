@@ -278,20 +278,35 @@ textarea {
     background:
         linear-gradient(
             90deg,
-            rgba(7, 9, 12, 0.96) 0%,
-            rgba(7, 9, 12, 0.86) 42%,
-            rgba(7, 9, 12, 0.48) 100%
-        ),
-        radial-gradient(
-            circle at 75% 38%,
-            rgba(48, 57, 68, 0.72) 0%,
-            rgba(21, 27, 34, 0.55) 28%,
-            rgba(7, 9, 12, 0.14) 62%
+            rgba(7, 9, 12, 0.94) 0%,
+            rgba(7, 9, 12, 0.67) 48%,
+            rgba(7, 9, 12, 0.18) 100%
         ),
         url("https://images.unsplash.com/photo-1760246964044-1384f71665b9?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=2400");
 
     background-position: center;
     background-size: cover;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+    background-size: 58px 58px;
+
+    mask-image: linear-gradient(90deg, transparent 0%, black 52%, black 100%);
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.hero .wrap {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
@@ -333,6 +348,72 @@ textarea {
     margin-top: 28px;
 }
 
+.hero-status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 12px;
+
+    width: fit-content;
+    max-width: 100%;
+
+    margin-top: 34px;
+    padding: 10px 14px;
+
+    background: rgba(7, 9, 12, 0.63);
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    backdrop-filter: blur(8px);
+
+    color: #d8dde3;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.status-item {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: #75d685;
+    box-shadow: 0 0 0 0 rgba(117, 214, 133, 0.7);
+
+    animation: status-pulse 2s infinite;
+}
+
+.status-divider {
+    width: 1px;
+    height: 14px;
+
+    background: rgba(255, 255, 255, 0.24);
+}
+
+@keyframes status-pulse {
+    70% {
+        box-shadow: 0 0 0 7px rgba(117, 214, 133, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(117, 214, 133, 0);
+    }
+}
+
 
 /* =========================================================
    11. HERO STATS
@@ -357,6 +438,10 @@ textarea {
     border-right:
         1px solid
         rgba(255, 255, 255, 0.08);
+}
+
+.stat:first-child {
+    padding-left: 0;
 }
 
 .stat:last-child {
@@ -464,6 +549,19 @@ section {
         transform 0.25s ease,
         border-color 0.25s ease,
         background 0.25s ease;
+}
+
+.card::before {
+    content: "";
+
+    display: block;
+
+    width: 28px;
+    height: 2px;
+
+    margin-bottom: 22px;
+
+    background: var(--gold);
 }
 
 .card:hover {
@@ -638,8 +736,8 @@ section {
     background:
         linear-gradient(
             135deg,
-            rgba(16, 21, 27, 0.96),
-            rgba(16, 21, 27, 0.82)
+            rgba(16, 21, 27, 0.86),
+            rgba(16, 21, 27, 0.42)
         ),
         url("https://images.unsplash.com/photo-1762698070244-731ae64e5ff6?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1600");
 
@@ -649,6 +747,8 @@ section {
     border:
         1px solid
         var(--line);
+
+    box-shadow: 18px 18px 0 rgba(214, 170, 80, 0.09);
 }
 
 .feature h3 {
@@ -1036,6 +1136,19 @@ footer {
         font-size: 16px;
     }
 
+    .hero-status {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding: 12px;
+    }
+
+    .status-divider {
+        display: none;
+    }
+
 
     /* Grids */
 
@@ -1098,6 +1211,23 @@ footer {
 
     .nav > .button {
         display: none;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 
 }

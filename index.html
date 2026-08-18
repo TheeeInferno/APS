@@ -15,7 +15,11 @@
         content="Professional security and mobile patrol services by Advance Protection Services."
     >
 
-    <link rel="stylesheet" href="styles.css">
+    <meta property="og:title" content="Advance Protection Services | Professional Security Solutions">
+    <meta property="og:description" content="Professional armed, unarmed, and mobile patrol security solutions for Southern California properties.">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -31,11 +35,24 @@
             APS · ADVANCE PROTECTION SERVICES
             </a>
 
-            <nav class="links" aria-label="Main navigation">
-                <a href="#services">Services</a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Open navigation</span>
+                <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+            </button>
+
+            <nav class="links" id="primary-navigation" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <details class="nav-services">
+                    <summary>Services</summary>
+                    <div class="service-menu">
+                        <a href="services/armed-security/">Armed Security</a>
+                        <a href="services/unarmed-security/">Unarmed Security</a>
+                        <a href="services/mobile-patrol/">Mobile Patrol</a>
+                    </div>
+                </details>
                 <a href="#industries">Industries</a>
-                <a href="#patrol">Mobile Patrol</a>
                 <a href="#about">About</a>
+                <a href="#service-area">Service Areas</a>
                 <a href="#contact">Contact</a>
             </nav>
 
@@ -174,6 +191,8 @@
                             for properties requiring an enhanced
                             security presence.
                         </p>
+
+                        <a class="card-link" href="services/armed-security/">Explore armed security <span aria-hidden="true">→</span></a>
                     </article>
 
 
@@ -193,6 +212,8 @@
                             on deterrence, safety, access control,
                             and service.
                         </p>
+
+                        <a class="card-link" href="services/unarmed-security/">Explore unarmed security <span aria-hidden="true">→</span></a>
                     </article>
 
 
@@ -212,6 +233,8 @@
                             visible deterrence, response, and
                             documentation.
                         </p>
+
+                        <a class="card-link" href="services/mobile-patrol/">Explore mobile patrol <span aria-hidden="true">→</span></a>
                     </article>
 
 
@@ -339,6 +362,32 @@
 
                 </div>
 
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             WHY APS
+        ====================================================== -->
+
+        <section class="why-aps" id="why-aps">
+            <div class="wrap">
+                <div class="head">
+                    <div>
+                        <div class="eyebrow">The APS Difference</div>
+                        <h2>Why Choose APS?</h2>
+                    </div>
+                    <p>Security service works best when the people protecting your property are backed by clear standards and responsive management.</p>
+                </div>
+
+                <div class="trust-grid">
+                    <article class="trust-card"><span class="trust-icon" aria-hidden="true">01</span><h3>Local Management</h3><p>APS is locally managed with a focus on responsive service and communication.</p></article>
+                    <article class="trust-card"><span class="trust-icon" aria-hidden="true">02</span><h3>Professional Security</h3><p>Professional personnel and consistent operational standards for every assignment.</p></article>
+                    <article class="trust-card"><span class="trust-icon" aria-hidden="true">03</span><h3>Detailed Reporting</h3><p>Clear documentation and reporting help keep clients informed.</p></article>
+                    <article class="trust-card"><span class="trust-icon" aria-hidden="true">04</span><h3>Responsive Communication</h3><p>Clients have a clear line of communication with APS management.</p></article>
+                    <article class="trust-card"><span class="trust-icon" aria-hidden="true">05</span><h3>Customized Plans</h3><p>Security solutions are designed around each property and its requirements.</p></article>
+                    <article class="trust-card"><span class="trust-icon" aria-hidden="true">06</span><h3>Local Coverage</h3><p>Professional security services throughout APS's confirmed service area.</p></article>
+                </div>
             </div>
         </section>
 
@@ -555,7 +604,7 @@
              SERVICE AREA
         ====================================================== -->
 
-        <section class="area">
+        <section class="area" id="service-area">
 
             <div class="wrap area-box">
 
@@ -570,31 +619,66 @@
                     </h2>
 
                     <p class="muted">
-                        Update this section with your exact
-                        coverage area before launch.
+                        APS serves Southern California properties. Confirmed cities and coverage details should be added in <code>assets/js/site-config.js</code> before publishing.
                     </p>
+
+                    <a class="outline" href="#contact">Request service in your area</a>
 
                 </div>
 
 
-                <div class="pills">
+                <div class="area-visual">
+                <div class="pills" data-service-areas>
 
-                    <span class="pill">
-                        High Desert
-                    </span>
+                    <span class="pill">High Desert</span>
+                    <span class="pill">Inland Empire</span>
+                    <span class="pill">San Bernardino County</span>
 
-                    <span class="pill">
-                        Inland Empire
-                    </span>
-
-                    <span class="pill">
-                        San Bernardino County
-                    </span>
-
+                </div>
+                    <div class="service-map" role="img" aria-label="Illustrative map showing APS's listed Southern California coverage areas">
+                        <span class="map-point point-one">High Desert</span>
+                        <span class="map-point point-two">Inland Empire</span>
+                        <span class="map-point point-three">San Bernardino County</span>
+                        <small>Illustrative coverage map — confirm availability for your location.</small>
+                    </div>
                 </div>
 
             </div>
 
+        </section>
+
+
+        <!-- =====================================================
+             SECURITY IN ACTION / TESTIMONIALS
+        ====================================================== -->
+
+        <section class="dark proof-section">
+            <div class="wrap">
+                <div class="head">
+                    <div><div class="eyebrow">Security in Action</div><h2>Prepared for the details that matter.</h2></div>
+                    <p>Replace these clearly marked placeholders with approved APS case studies before publishing.</p>
+                </div>
+                <div class="response-grid">
+                    <article class="response-card"><span>Situation</span><h3>Case study placeholder</h3><p><strong>APS Response:</strong> Add the verified response process here.</p><p><strong>Result:</strong> Add the verified outcome here.</p></article>
+                    <article class="response-card"><span>Situation</span><h3>Case study placeholder</h3><p><strong>APS Response:</strong> Add the verified response process here.</p><p><strong>Result:</strong> Add the verified outcome here.</p></article>
+                    <article class="response-card"><span>Situation</span><h3>Case study placeholder</h3><p><strong>APS Response:</strong> Add the verified response process here.</p><p><strong>Result:</strong> Add the verified outcome here.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="wrap">
+                <div class="head">
+                    <div><div class="eyebrow">Client Feedback</div><h2>Built on accountable service.</h2></div>
+                    <p>Use verified feedback only. These cards are ready for approved client testimonials.</p>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial"><p>“Approved testimonial placeholder.”</p><strong>Client name to be confirmed</strong><small>Company or property type to be confirmed</small></article>
+                    <article class="testimonial"><p>“Approved testimonial placeholder.”</p><strong>Client name to be confirmed</strong><small>Company or property type to be confirmed</small></article>
+                    <article class="testimonial"><p>“Approved testimonial placeholder.”</p><strong>Client name to be confirmed</strong><small>Company or property type to be confirmed</small></article>
+                </div>
+                <div class="reviews-placeholder"><div><div class="eyebrow">Google Reviews</div><h3>Google Business Profile connection pending</h3><p class="muted">Add APS's verified Google review URL and rating once available.</p></div><a class="outline" href="#" aria-disabled="true">View Our Google Reviews</a></div>
+            </div>
         </section>
 
 
@@ -644,18 +728,18 @@
                     </h2>
 
                     <p class="muted">
-                        Replace the placeholder contact details
-                        before publishing.
+                        Contact details are maintained in the central
+                        <code>assets/js/site-config.js</code> file.
                     </p>
 
                     <p>
                         <strong>Phone:</strong>
-                        YOUR PHONE NUMBER
+                        <span data-business="phone">Phone number coming soon</span>
                     </p>
 
                     <p>
                         <strong>Email:</strong>
-                        YOUR EMAIL ADDRESS
+                        <span data-business="email">Email address coming soon</span>
                     </p>
 
                 </div>
@@ -663,98 +747,34 @@
 
                 <div class="contact">
 
-                    <form
-                        aria-label="Request a quote"
-                        onsubmit="event.preventDefault(); alert('Form demo: connect this form to an email/form service before publishing.');"
-                    >
-
+                    <form aria-label="Request a quote" data-quote-form>
+                        <p class="form-note"><span aria-hidden="true">*</span> Required fields</p>
                         <div class="grid2">
-
-                            <label class="sr-only" for="name">Your name</label>
-                            <input
-                                id="name"
-                                name="name"
-                                type="text"
-                                placeholder="Your Name"
-                                autocomplete="name"
-                                required
-                            >
-
-                            <label class="sr-only" for="email">Email address</label>
-                            <input
-                                id="email"
-                                name="email"
-                                type="email"
-                                placeholder="Email Address"
-                                autocomplete="email"
-                                required
-                            >
-
+                            <div><label for="first-name">First name <span aria-hidden="true">*</span></label><input id="first-name" name="firstName" type="text" autocomplete="given-name" required></div>
+                            <div><label for="last-name">Last name <span aria-hidden="true">*</span></label><input id="last-name" name="lastName" type="text" autocomplete="family-name" required></div>
                         </div>
-
-
                         <div class="grid2">
-
-                            <label class="sr-only" for="company">Company or property</label>
-                            <input
-                                id="company"
-                                name="company"
-                                type="text"
-                                placeholder="Company / Property"
-                                autocomplete="organization"
-                            >
-
-                            <label class="sr-only" for="phone">Phone number</label>
-                            <input
-                                id="phone"
-                                name="phone"
-                                type="tel"
-                                placeholder="Phone Number"
-                                autocomplete="tel"
-                            >
-
+                            <div><label for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization"></div>
+                            <div><label for="phone">Phone <span aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
                         </div>
-
-
-                        <label class="sr-only" for="service">Service needed</label>
-                        <select id="service" name="service" required>
-                            <option value="" selected disabled>
-                                Service Needed
-                            </option>
-
-                            <option value="armed-security">
-                                Armed Security
-                            </option>
-
-                            <option value="unarmed-security">
-                                Unarmed Security
-                            </option>
-
-                            <option value="mobile-patrol">
-                                Mobile Patrol
-                            </option>
-
-                            <option value="custom-security">
-                                Custom Security
-                            </option>
-                        </select>
-
-
-                        <label class="sr-only" for="message">Property and security needs</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            placeholder="Tell us about your property and security needs"
-                        ></textarea>
-
-
-                        <button
-                            class="submit"
-                            type="submit"
-                        >
-                            Request a Quote
-                        </button>
-
+                        <div><label for="email">Email <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required></div>
+                        <div><label for="address">Property address <span aria-hidden="true">*</span></label><input id="address" name="propertyAddress" type="text" autocomplete="street-address" required></div>
+                        <div class="grid3">
+                            <div><label for="city">City <span aria-hidden="true">*</span></label><input id="city" name="city" autocomplete="address-level2" required></div>
+                            <div><label for="state">State <span aria-hidden="true">*</span></label><input id="state" name="state" autocomplete="address-level1" required></div>
+                            <div><label for="zip">ZIP <span aria-hidden="true">*</span></label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" required></div>
+                        </div>
+                        <div class="grid2">
+                            <div><label for="service">Service needed <span aria-hidden="true">*</span></label><select id="service" name="service" required><option value="" selected disabled>Select a service</option><option value="armed-security">Armed Security</option><option value="unarmed-security">Unarmed Security</option><option value="mobile-patrol">Mobile Patrol</option></select></div>
+                            <div><label for="property-type">Property type <span aria-hidden="true">*</span></label><select id="property-type" name="propertyType" required><option value="" selected disabled>Select property type</option><option>Commercial</option><option>Multifamily / HOA</option><option>Construction</option><option>Retail</option><option>Industrial</option><option>Event</option><option>Other</option></select></div>
+                        </div>
+                        <div class="grid2">
+                            <div><label for="coverage">Desired coverage</label><input id="coverage" name="desiredCoverage" type="text" placeholder="Example: overnight patrol, 7 days/week"></div>
+                            <div><label for="start-date">Desired start date</label><input id="start-date" name="startDate" type="date"></div>
+                        </div>
+                        <div><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us about your property and security needs"></textarea></div>
+                        <p class="form-feedback" aria-live="polite" hidden></p>
+                        <button class="submit" type="submit">Request a Quote</button>
                     </form>
 
                 </div>
@@ -772,14 +792,18 @@
 
     <footer>
 
-        <div class="wrap">
-
-            &copy; 2026 Advance Protection Services
-            · Professional Security Solutions
-
+        <div class="wrap footer-grid">
+            <div><a class="brand" href="#home">APS · ADVANCE PROTECTION SERVICES</a><p>Professional security personnel and mobile patrol services for Southern California properties.</p></div>
+            <div><h2>Services</h2><a href="services/armed-security/">Armed Security</a><a href="services/unarmed-security/">Unarmed Security</a><a href="services/mobile-patrol/">Mobile Patrol</a></div>
+            <div><h2>Service Areas</h2><p data-business="serviceArea">Southern California — exact cities to be confirmed</p><a href="#service-area">Coverage details</a></div>
+            <div><h2>Contact</h2><p data-business="phone">Phone number coming soon</p><p data-business="email">Email address coming soon</p><p data-business="hours">Operating hours to be confirmed</p></div>
         </div>
+        <div class="wrap footer-bottom">&copy; 2026 Advance Protection Services <span>·</span> <a href="legal/privacy.html">Privacy Policy</a> <a href="legal/terms.html">Terms</a> <a href="legal/accessibility.html">Accessibility</a></div>
 
     </footer>
+
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/app.js"></script>
 
 </body>
 </html>

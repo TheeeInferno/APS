@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace https://your-production-domain.example with the verified production domain before launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://your-production-domain.example/</loc></url>
+  <url><loc>https://your-production-domain.example/services/armed-security/</loc></url>
+  <url><loc>https://your-production-domain.example/services/unarmed-security/</loc></url>
+  <url><loc>https://your-production-domain.example/services/mobile-patrol/</loc></url>
+</urlset>

@@ -75,7 +75,7 @@
             clearInterval(intervalId);
             intervalId = window.setInterval(function () {
                 showSlide(currentSlide + 1);
-            }, 7000);
+            }, 3000);
         }
 
         controls.forEach(function (control, index) {

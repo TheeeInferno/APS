@@ -276,12 +276,22 @@ textarea {
     overflow: hidden;
 
     background:
+        linear-gradient(
+            90deg,
+            rgba(7, 9, 12, 0.96) 0%,
+            rgba(7, 9, 12, 0.86) 42%,
+            rgba(7, 9, 12, 0.48) 100%
+        ),
         radial-gradient(
             circle at 75% 38%,
-            #303944 0%,
-            #151b22 28%,
-            #07090c 62%
-        );
+            rgba(48, 57, 68, 0.72) 0%,
+            rgba(21, 27, 34, 0.55) 28%,
+            rgba(7, 9, 12, 0.14) 62%
+        ),
+        url("https://images.unsplash.com/photo-1760246964044-1384f71665b9?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=2400");
+
+    background-position: center;
+    background-size: cover;
 }
 
 .hero h1 {
@@ -625,7 +635,16 @@ section {
 .feature {
     padding: 35px;
 
-    background: var(--panel);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(16, 21, 27, 0.96),
+            rgba(16, 21, 27, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1762698070244-731ae64e5ff6?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1600");
+
+    background-position: center;
+    background-size: cover;
 
     border:
         1px solid

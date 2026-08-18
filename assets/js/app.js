@@ -51,6 +51,47 @@
         }));
     });
 
+    const carousel = document.querySelector("[data-hero-carousel]");
+    if (carousel) {
+        const slides = Array.from(carousel.querySelectorAll(".hero-slide"));
+        const controls = Array.from(carousel.querySelectorAll("[data-hero-slide]"));
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let currentSlide = 0;
+        let intervalId;
+
+        function showSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            slides.forEach(function (slide, slideIndex) {
+                slide.classList.toggle("is-active", slideIndex === currentSlide);
+            });
+            controls.forEach(function (control, controlIndex) {
+                control.classList.toggle("is-active", controlIndex === currentSlide);
+                control.setAttribute("aria-current", String(controlIndex === currentSlide));
+            });
+        }
+
+        function startCarousel() {
+            if (reducedMotion || slides.length < 2) return;
+            clearInterval(intervalId);
+            intervalId = window.setInterval(function () {
+                showSlide(currentSlide + 1);
+            }, 7000);
+        }
+
+        controls.forEach(function (control, index) {
+            control.addEventListener("click", function () {
+                showSlide(index);
+                startCarousel();
+            });
+        });
+
+        carousel.addEventListener("mouseenter", function () { clearInterval(intervalId); });
+        carousel.addEventListener("mouseleave", startCarousel);
+        carousel.addEventListener("focusin", function () { clearInterval(intervalId); });
+        carousel.addEventListener("focusout", startCarousel);
+        startCarousel();
+    }
+
     const quoteForm = document.querySelector("[data-quote-form]");
     if (!quoteForm) return;
 

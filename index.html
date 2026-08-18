@@ -70,7 +70,12 @@
              HERO
         ====================================================== -->
 
-        <section class="hero" id="home">
+        <section class="hero" id="home" data-hero-carousel>
+            <div class="hero-slides" aria-hidden="true">
+                <span class="hero-slide is-active" style="--hero-image: url('https://images.unsplash.com/photo-1760246964044-1384f71665b9?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2400');"></span>
+                <span class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1769247178314-39230e302d74?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2400');"></span>
+                <span class="hero-slide" style="--hero-image: url('https://images.unsplash.com/photo-1768752435475-2e55baeed00f?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=2400');"></span>
+            </div>
             <div class="wrap">
 
                 <div class="eyebrow">
@@ -113,6 +118,12 @@
                     <span class="status-divider" aria-hidden="true"></span>
 
                     <span class="status-item">Documented Reporting</span>
+                </div>
+
+                <div class="hero-carousel-controls" aria-label="Hero image controls">
+                    <button class="is-active" type="button" data-hero-slide="0"><span class="sr-only">Show commercial property image</span></button>
+                    <button type="button" data-hero-slide="1"><span class="sr-only">Show construction site image</span></button>
+                    <button type="button" data-hero-slide="2"><span class="sr-only">Show industrial property image</span></button>
                 </div>
 
 
